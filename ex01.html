@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex01</title>
+    <scripT>
+
+        /*var vehicleName = 'Toyota';
+
+        function printVehicleNameOuter(){
+
+            console.log(this.vehicleName);
+        }
+
+        //console.log(this);
+
+       // printVehicleNameOuter();
+
+        var Vehicle = {
+
+            vehicleName : 'Nissan',
+            printVehicleNameInner: function (){
+
+                return function (age){
+
+                    console.log(this.vehicleName + " ... " + age);
+                }
+            }
+        };
+
+        var execute = Vehicle.printVehicleNameInner();
+        execute('14');
+        execute.call(Vehicle, '14');
+
+        var exe = Vehicle.printVehicleNameInner().bind(Vehicle);
+        exe('14');*/
+
+//            ...........................                               //
+
+        /*function taxCalculate(per){
+
+            var taxPercentage = per;
+
+            return function (amount){
+
+                return amount * taxPercentage / 100;
+            }
+        }
+
+        var calc = taxCalculate(15);
+        var result = calc(1000);
+        console.log(result);*/
+
+        //                  ..................................... //////////
+
+
+        /*function fetchUser(){
+
+            return fetch('https://api.github.com/users').then(response => response.json());
+        }
+
+        fetchUser().then(function (josn){
+
+            console.log(josn);
+        });
+
+
+        function fetchUsers() {
+            fetch('https://api.github.com/users').then(function (response) {
+                return response.json();
+            }).then(function (json) {
+                console.log(json);
+            });
+        }
+
+        fetchUsers();*/
+
+        //            .......................                         //
+
+        /*function Vehicle(type){
+
+            this.type = type;
+            Vehicle.vehicleCount++;
+        }
+
+        Vehicle.vehicleCount = 0;
+
+        Vehicle.prototype.print = function (){
+
+          console.log("vehicle is driving");
+        };
+
+        var v1 = new Vehicle('Honda');
+        v1.print();
+        console.log(v1.type, Vehicle.vehicleCount);
+
+        Car.prototype = Object.create(Vehicle.prototype);
+
+        function Car(type){
+
+            Vehicle.call(this, type);
+        }
+
+        Car.prototype.balanced = function (){
+
+            console.log("wheels are balanced..");
+        }
+
+        var c1 = new Car('Ferrari');
+
+        console.log(c1.type);
+        console.log(Vehicle.vehicleCount);*/
+
+        /*let x = 5;
+        x = 6;
+
+        console.log(x);
+
+        {
+            let x = 56;
+            console.log(x);
+        }*/
+
+        //                    .................                           //
+
+        /*var fun01 =  (name)=> "hello " + name;
+
+
+        var res = fun01('stanley');
+        console.log(res);*/
+
+
+        class Vehicle {
+
+            constructor (type){
+
+                this.type = type;
+                Vehicle.vehicleCount++;
+            }
+
+            drive (){
+
+                console.log("vehicle is driving")
+            }
+        }
+
+        Vehicle.vehicleCount = 0;
+
+        const v1 = new Vehicle('Toyota');
+        v1.drive();
+        console.log(v1.type + ' .. ' + Vehicle.vehicleCount);
+
+
+        class Car extends Vehicle{
+
+            constructor(type){
+                super(type);
+            }
+
+            balance(){
+
+                console.log("wheels are balancedd...");
+            }
+        }
+
+
+        const c1 = new Car('Honda');
+
+        c1.drive();
+        c1.balance();
+        console.log(c1.type + '  . '  + Vehicle.vehicleCount);
+
+
+
+
+
+    </scripT>
+</head>
+<body>
+
+</body>
+</html>
